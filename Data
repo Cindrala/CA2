@@ -1,0 +1,7 @@
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+url = "https://www.pexels.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+df = pd.DataFrame(soup)
